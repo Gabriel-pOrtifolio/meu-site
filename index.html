@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Augusto Carvalho | Portfólio Profissional</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;scroll-behavior:smooth}
+body{background:#f1f5f9;color:#1e293b}
+
+nav{
+background:#0f172a;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000
+}
+
+nav h2{color:#fff;font-weight:600}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+align-items:center
+}
+
+nav ul li a{
+color:#cbd5e1;
+text-decoration:none;
+font-weight:500;
+transition:.3s
+}
+
+nav ul li a:hover{color:#38bdf8}
+
+select{
+background:#1e293b;
+color:#fff;
+border:1px solid #334155;
+padding:6px 10px;
+border-radius:6px;
+cursor:pointer
+}
+
+header{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+padding:100px 8%;
+text-align:center
+}
+
+header h1{font-size:2.8rem;margin-bottom:15px}
+header p{font-size:1.2rem;font-weight:300;margin-bottom:25px}
+
+.btn-primary{
+padding:14px 28px;
+background:#38bdf8;
+border:none;
+color:#0f172a;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
+display:inline-block
+}
+
+.btn-primary:hover{background:#0ea5e9}
+
+section{padding:80px 8%}
+
+section h2{
+font-size:2rem;
+margin-bottom:40px;
+position:relative
+}
+
+section h2::after{
+content:"";
+width:60px;
+height:4px;
+background:#38bdf8;
+position:absolute;
+bottom:-10px;
+left:0
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+transition:.3s
+}
+
+.card:hover{transform:translateY(-5px)}
+
+.card i{
+font-size:30px;
+margin-bottom:15px;
+color:#38bdf8
+}
+
+.card h3{margin-bottom:15px;font-size:1.2rem}
+.card ul{padding-left:18px}
+.card ul li{margin-bottom:8px}
+
+.contact-box{
+background:#0f172a;
+color:white;
+padding:40px;
+border-radius:16px
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#0f172a;
+color:#94a3b8
+}
+
+@media(max-width:768px){
+header h1{font-size:2rem}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Gabriel Carvalho</h2>
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#experiencia">Experiência</a></li>
+<li><a href="#habilidades">Habilidades</a></li>
+<li><a href="#contato">Contato</a></li>
+<li>
+<select onchange="changeLanguage(this.value)">
+<option value="pt">🇧🇷 PT</option>
+<option value="en">🇺🇸 EN</option>
+<option value="es">🇪🇸 ES</option>
+<option value="fr">🇫🇷 FR</option>
+<option value="de">🇩🇪 DE</option>
+</select>
+</li>
+</ul>
+</nav>
+
+<header>
+<h1 id="titulo">Analista de Suporte & Infraestrutura de Redes</h1>
+<p id="subtitulo">Especialista em Cabeamento Estruturado, CFTV, Manutenção Técnica e Infraestrutura Elétrica</p>
+<a href="curriculo.html" class="btn-primary" id="botao">Currículo</a>
+</header>
+
+<section id="sobre">
+<h2>Sobre Mim</h2>
+<div class="card">
+<p>
+Profissional com formação técnica em Informática e experiência prática em projetos de infraestrutura tecnológica, suporte técnico hospitalar e implementação de sistemas de segurança eletrônica.
+</p>
+</div>
+</section>
+
+<section id="experiencia">
+<h2>Experiência Profissional</h2>
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-network-wired"></i>
+<h3>Projetos DETRAN</h3>
+<ul>
+<li>Implantação de infraestrutura de rede lógica</li>
+<li>Cabeamento estruturado</li>
+<li>Montagem de racks e patch panels</li>
+<li>Instalação e configuração de switches</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fas fa-hospital"></i>
+<h3>Suporte Hospitalar</h3>
+<ul>
+<li>Manutenção preventiva e corretiva</li>
+<li>Suporte de hardware e software</li>
+<li>Manutenção de impressoras e totens</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fas fa-video"></i>
+<h3>Sistemas de CFTV</h3>
+<ul>
+<li>Instalação de câmeras</li>
+<li>Configuração de DVR/NVR</li>
+<li>Integração com redes locais</li>
+<li>Manutenção técnica especializada</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fas fa-bolt"></i>
+<h3>Infraestrutura Elétrica</h3>
+<ul>
+<li>Montagem de quadros elétricos</li>
+<li>Instalação de infraestrutura</li>
+<li>Organização de cabeamento elétrico</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="habilidades">
+<h2>Habilidades Técnicas</h2>
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-tools"></i>
+<h3>Infraestrutura</h3>
+<ul>
+<li>Cabeamento Estruturado</li>
+<li>Montagem de Racks</li>
+<li>Configuração de Switches</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fas fa-desktop"></i>
+<h3>Suporte Técnico</h3>
+<ul>
+<li>Manutenção de Hardware</li>
+<li>Manutenção de Software</li>
+<li>Diagnóstico Técnico</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fas fa-code"></i>
+<h3>Desenvolvimento</h3>
+<ul>
+<li>HTML & CSS</li>
+<li>JavaScript</li>
+<li>PHP & Python</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+<div class="contact-box">
+<p><strong>Email:</strong> gb.augusto.carvalho@gmail.com</p>
+<p><strong>Telefone:</strong> (21) 99053-0602</p>
+<p><strong>Localização:</strong> Rio de Janeiro - RJ</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Gabriel Augusto de Oliveira Carvalho</p>
+</footer>
+
+<script>
+function changeLanguage(lang){
+if(lang==="en"){
+document.getElementById("titulo").innerText="IT Support & Network Infrastructure Analyst";
+document.getElementById("subtitulo").innerText="Specialist in Structured Cabling, CCTV and Technical Maintenance";
+document.getElementById("botao").innerText="Resume";
+}
+if(lang==="pt"){
+location.reload();
+}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo | Gabriel Augusto de Oliveira Carvalho</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f1f5f9;color:#1e293b}
+
+/* NAVBAR */
+nav{background:#0f172a;padding:15px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+nav h2{color:#fff}
+nav ul{list-style:none;display:flex;gap:20px;align-items:center}
+nav a{color:#cbd5e1;text-decoration:none;font-weight:500}
+nav a:hover{color:#38bdf8}
+select{padding:6px;border-radius:6px;border:none}
+
+/* HERO */
+header{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:80px 8%;text-align:center}
+header h1{font-size:2.2rem;margin-bottom:10px}
+header p{color:#cbd5e1}
+
+/* CONTENT */
+section{padding:70px 8%}
+section h2{font-size:1.8rem;margin-bottom:30px;border-left:4px solid #38bdf8;padding-left:10px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.card{background:#fff;padding:30px;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.06);transition:0.3s}
+.card:hover{transform:translateY(-5px)}
+.card i{font-size:28px;color:#38bdf8;margin-bottom:15px}
+.card h3{margin-bottom:15px}
+.card ul{padding-left:18px}
+.card li{margin-bottom:8px}
+
+.btn{display:inline-block;margin-top:40px;padding:14px 30px;background:#38bdf8;color:#0f172a;text-decoration:none;font-weight:600;border-radius:8px}
+.btn:hover{background:#0ea5e9}
+
+footer{text-align:center;padding:30px;background:#0f172a;color:#94a3b8;margin-top:60px}
+
+@media(max-width:768px){header h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+
+<nav>
+<h2>Gabriel Carvalho</h2>
+<ul>
+<li><a href="index.html">Início</a></li>
+<li>
+<select onchange="changeLanguage(this.value)">
+<option value="pt">PT</option>
+<option value="en">EN</option>
+<option value="es">ES</option>
+<option value="fr">FR</option>
+<option value="de">DE</option>
+</select>
+</li>
+</ul>
+</nav>
+
+<header>
+<h1 data-i18n="title">Currículo Profissional</h1>
+<p data-i18n="subtitle">Resumo completo das qualificações e experiências</p>
+</header>
+
+<section>
+<h2 data-i18n="summary_title">Resumo Profissional</h2>
+<div class="card" data-i18n="summary_text">
+Profissional com formação técnica em Informática e experiência prática em infraestrutura de redes, suporte técnico, manutenção de hardware e software, além de implementação de sistemas de CFTV e infraestrutura elétrica.
+</div>
+</section>
+
+<section>
+<h2 data-i18n="experience_title">Experiência Profissional</h2>
+<div class="grid">
+<div class="card">
+<i class="fas fa-network-wired"></i>
+<h3>CONNECTA Serviços de Informática</h3>
+<ul>
+<li>Analista de Suporte e Infraestrutura (Freelancer)</li>
+<li>Implantação de cabeamento estruturado</li>
+<li>Montagem de racks e patch panels</li>
+<li>Configuração de switches</li>
+<li>Suporte técnico corporativo</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<h2 data-i18n="education_title">Formação e Certificações</h2>
+<div class="grid">
+<div class="card">
+<i class="fas fa-graduation-cap"></i>
+<ul>
+<li>Técnico em Informática – 1200h</li>
+<li>Analista de Suporte Técnico – SENAC</li>
+<li>Introdução à Cybersegurança – CISCO</li>
+<li>Excel e Excel Avançado – SENAC</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<h2 data-i18n="skills_title">Habilidades Técnicas</h2>
+<div class="grid">
+<div class="card"><i class="fas fa-tools"></i>Infraestrutura e Cabeamento de Redes</div>
+<div class="card"><i class="fas fa-desktop"></i>Manutenção de Hardware e Software</div>
+<div class="card"><i class="fas fa-video"></i>Instalação de CFTV</div>
+<div class="card"><i class="fas fa-code"></i>HTML, CSS, JS, PHP, Python</div>
+</div>
+
+<a href="curriculo-Gabriel2.pdf" class="btn" download data-i18n="download">Baixar Currículo em PDF</a>
+</section>
+
+<footer>
+© 2026 Gabriel Augusto de Oliveira Carvalho
+</footer>
+
+<script>
+const translations={
+pt:{title:"Currículo Profissional",subtitle:"Resumo completo das qualificações e experiências",summary_title:"Resumo Profissional",summary_text:"Profissional com formação técnica em Informática e experiência prática em infraestrutura de redes, suporte técnico, manutenção de hardware e software, além de implementação de sistemas de CFTV e infraestrutura elétrica.",experience_title:"Experiência Profissional",education_title:"Formação e Certificações",skills_title:"Habilidades Técnicas",download:"Baixar Currículo em PDF"},
+en:{title:"Professional Resume",subtitle:"Complete overview of qualifications and experience",summary_title:"Professional Summary",summary_text:"IT professional with experience in infrastructure, technical support, hardware/software maintenance and CCTV systems.",experience_title:"Professional Experience",education_title:"Education & Certifications",skills_title:"Technical Skills",download:"Download Resume PDF"},
+es:{title:"Currículum Profesional",subtitle:"Resumen completo de cualificaciones y experiencia",summary_title:"Resumen Profesional",summary_text:"Profesional TI con experiencia en infraestructura y soporte técnico.",experience_title:"Experiencia Profesional",education_title:"Formación y Certificaciones",skills_title:"Habilidades Técnicas",download:"Descargar CV"},
+fr:{title:"CV Professionnel",subtitle:"Résumé complet des qualifications",summary_title:"Résumé Professionnel",summary_text:"Professionnel IT avec expérience en infrastructure et support.",experience_title:"Expérience Professionnelle",education_title:"Formation & Certifications",skills_title:"Compétences Techniques",download:"Télécharger le CV"},
+de:{title:"Professioneller Lebenslauf",subtitle:"Überblick über Qualifikationen und Erfahrung",summary_title:"Berufliches Profil",summary_text:"IT-Fachmann mit Erfahrung in Infrastruktur und Support.",experience_title:"Berufserfahrung",education_title:"Ausbildung & Zertifikate",skills_title:"Technische Fähigkeiten",download:"Lebenslauf herunterladen"}
+};
+function changeLanguage(lang){document.querySelectorAll('[data-i18n]').forEach(el=>{el.innerText=translations[lang][el.getAttribute('data-i18n')]});}
+</script>
+
+</body>
+</html>
