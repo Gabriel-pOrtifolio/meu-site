@@ -5,35 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início | Gabriel Carvalho</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Arquivo JS Externo -->
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <nav>
     <h2>Gabriel Carvalho</h2>
-    <ul>
-        <li><a href="index.html" class="ativo">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-    </ul>
+    <div class="nav-controls">
+        <ul id="nav-links">
+            <li><a href="index.html" class="ativo">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar Tema">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 </nav>
 
 <header>
-    <h1>Analista de Infraestrutura & Desenvolvedor</h1>
-    <p>Soluções completas em Redes, CFTV e Automação de Sistemas</p>
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h1 style="font-size: 3.2rem; margin-bottom: 20px;">Transformando Infraestrutura e Código em Soluções</h1>
+        <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 40px; color: #cbd5e1; font-weight: 300;">
+            Especialista em Redes, CFTV e Automação de Sistemas. Ajudo clínicas, hospitais e empresas a operarem com máxima eficiência tecnológica, enquanto desenvolvo ferramentas inteligentes e interfaces modernas utilizando Python, HTML, CSS e JavaScript.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="projetos.html" class="btn-primary btn-solid"><i class="fas fa-folder-open"></i> Ver Meus Projetos</a>
+            <a href="contato.html" class="btn-primary btn-outline"><i class="fas fa-envelope"></i> Entrar em Contato</a>
+        </div>
+    </div>
 </header>
 
 <section>
-    <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 50px 30px;">
-        <h2 style="margin-bottom: 20px; color: #0f172a;">Resumo Profissional</h2>
-        <p style="font-size: 1.1rem; line-height: 1.6; color: #475569;">
-            Profissional com atuação multidisciplinar, combinando sólida experiência em suporte técnico, implantação de redes estruturadas e CFTV, com o desenvolvimento de soluções em software. Especialista na criação de ferramentas de web scraping com Python, desenvolvimento web (HTML/CSS/JS) e automação de processos via dashboards financeiros avançados.
-        </p>
+    <div class="grid">
+        <div class="card" style="text-align: center;">
+            <i class="fas fa-server"></i>
+            <h3>Infraestrutura Sólida</h3>
+            <p>Implementação de cabeamento estruturado, montagem de racks e manutenção de hardware focado em alta disponibilidade.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <i class="fas fa-code"></i>
+            <h3>Desenvolvimento Ágil</h3>
+            <p>Criação de scripts de automação, web scraping para extração de dados e front-end dinâmico para plataformas web.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Segurança Eletrônica</h3>
+            <p>Instalação e configuração completa de sistemas de CFTV, DVR/NVR integrados diretamente a redes locais.</p>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Gabriel Augusto de Oliveira Carvalho</p>
+    <p>© 2026 Gabriel Augusto</p>
 </footer>
 
 </body>
