@@ -7,77 +7,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <nav>
     <h2>Gabriel Carvalho</h2>
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html" class="ativo">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-    </ul>
+    <div class="nav-controls">
+        <ul id="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html" class="ativo">Projetos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
+        <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    </div>
 </nav>
 
-<header>
+<header style="padding: 60px 8%;">
     <h1>Portfólio de Projetos</h1>
-    <p>Softwares e Infraestrutura de TI</p>
 </header>
 
 <section>
-    <h2 style="color: #0f172a; border-bottom: 3px solid #38bdf8; display: inline-block; padding-bottom: 5px;">Desenvolvimento & Automação</h2>
+    <h2 style="color: var(--text-color); border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px;">Desenvolvimento & Automação</h2>
     <div class="grid" style="margin-bottom: 60px;">
         <div class="card">
-            <i class="fab fa-python"></i>
+            <!-- Para colocar sua imagem real, troque a div abaixo por: <img src="caminho-da-imagem.jpg" class="mockup-img"> -->
+            <div class="mockup-img"><i class="fas fa-image fa-2x"></i></div>
             <h3>Agregador Mercado Livre</h3>
             <p>Plataforma construída com Python e Web Scraping para monitorar, extrair e catalogar as melhores ofertas de produtos em tempo real.</p>
         </div>
         <div class="card">
-            <i class="fas fa-file-excel"></i>
+            <div class="mockup-img"><i class="fas fa-image fa-2x"></i></div>
             <h3>Dashboards Financeiros</h3>
             <p>Planilhas automatizadas com KPIs dinâmicos para controle de finanças pessoais, incluindo categorização customizada de despesas.</p>
         </div>
         <div class="card">
-            <i class="fas fa-code"></i>
+            <div class="mockup-img"><i class="fas fa-image fa-2x"></i></div>
             <h3>Convites Interativos</h3>
             <p>Desenvolvimento UI/UX (HTML/CSS/JS) de convites digitais imersivos para eventos, focados em design responsivo e identidades visuais temáticas.</p>
         </div>
     </div>
 
-    <h2 style="color: #0f172a; border-bottom: 3px solid #38bdf8; display: inline-block; padding-bottom: 5px;">Infraestrutura & Redes</h2>
-    <div class="grid">
-        <div class="card">
-            <i class="fas fa-network-wired"></i>
-            <h3>Projetos DETRAN</h3>
-            <ul>
-                <li>Implantação de rede lógica e elétrica</li>
-                <li>Cabeamento estruturado</li>
-                <li>Montagem de racks e patch panels</li>
-            </ul>
-        </div>
-        <div class="card">
-            <i class="fas fa-hospital"></i>
-            <h3>Suporte Clínico (Sensivita)</h3>
-            <ul>
-                <li>Substituição de máquinas e manutenção</li>
-                <li>Ativação de sistemas e softwares</li>
-                <li>Otimização e limpeza de hardware</li>
-            </ul>
-        </div>
-        <div class="card">
-            <i class="fas fa-video"></i>
-            <h3>Sistemas de CFTV</h3>
-            <ul>
-                <li>Instalação de câmeras de segurança</li>
-                <li>Configuração de DVR/NVR</li>
-                <li>Integração e acesso remoto</li>
-            </ul>
-        </div>
+    <h2 style="color: var(--text-color); border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; margin-top: 40px;">Repositórios do GitHub</h2>
+    <!-- Container onde o script.js vai injetar os repositórios -->
+    <div class="grid" id="github-container">
+        <p>Carregando repositórios...</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Gabriel Augusto de Oliveira Carvalho</p>
+    <p>© 2026 Gabriel Augusto</p>
 </footer>
 
 </body>
