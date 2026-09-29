@@ -7,47 +7,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <nav>
     <h2>Gabriel Carvalho</h2>
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html" class="ativo">Contato</a></li>
-    </ul>
+    <div class="nav-controls">
+        <ul id="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="contato.html" class="ativo">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></button>
+        <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    </div>
 </nav>
 
-<header>
+<header style="padding: 80px 8%;">
     <h1>Vamos Conversar?</h1>
-    <p>Disponível para novos projetos e oportunidades</p>
+    <p style="color: #cbd5e1; font-weight: 300; font-size: 1.2rem; margin-top: 10px;">Disponível para novos projetos e oportunidades</p>
 </header>
 
 <section>
     <div class="contact-container">
         <div class="card">
-            <h2 style="margin-bottom: 15px; color: #0f172a;">Fale Diretamente Comigo</h2>
-            <p style="color: #475569; margin-bottom: 30px; font-size: 1.1rem;">
+            <h2 style="margin-bottom: 15px; color: var(--text-color);">Fale Diretamente Comigo</h2>
+            <p style="color: var(--text-color); opacity: 0.9; margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
                 Clique no botão abaixo para ser redirecionado automaticamente para o meu WhatsApp. Respondo rapidamente!
             </p>
             
-            <!-- Link da API do WhatsApp com mensagem pré-definida -->
             <a href="https://wa.me/5521990530602?text=Olá,%20Gabriel!%20Vim%20através%20do%20seu%20portfólio." target="_blank" class="btn-whatsapp">
                 <i class="fab fa-whatsapp" style="color: white; margin: 0; font-size: 1.5rem;"></i>
-                Iniciar Conversa no WhatsApp
+                Iniciar Conversa
             </a>
             
-            <div style="margin-top: 40px; text-align: left; border-top: 1px solid #e2e8f0; padding-top: 20px;">
-                <p style="margin-bottom: 10px;"><strong><i class="fas fa-envelope" style="color: #38bdf8; width: 20px; font-size: 1rem;"></i> Email:</strong> gb.augusto.carvalho@gmail.com</p>
-                <p><strong><i class="fas fa-map-marker-alt" style="color: #38bdf8; width: 20px; font-size: 1rem;"></i> Local:</strong> Rio de Janeiro - RJ</p>
+            <div style="margin-top: 40px; text-align: left; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                <p style="margin-bottom: 15px; color: var(--text-color);">
+                    <strong><i class="fas fa-envelope" style="color: var(--primary); width: 25px; font-size: 1.1rem;"></i> Email:</strong> gb.augusto.carvalho@gmail.com
+                </p>
+                <p style="color: var(--text-color);">
+                    <strong><i class="fas fa-map-marker-alt" style="color: var(--primary); width: 25px; font-size: 1.1rem;"></i> Local:</strong> Rio de Janeiro - RJ
+                </p>
             </div>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Gabriel Augusto de Oliveira Carvalho</p>
+    <p>© 2026 Gabriel Augusto</p>
 </footer>
 
 </body>
