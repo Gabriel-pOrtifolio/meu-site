@@ -56,3 +56,33 @@ section { padding: 60px 8%; min-height: 60vh; }
 .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
 
 footer { text-align: center; padding: 20px; background: var(--nav-bg); color: #94a3b8; }
+
+
+/* --- Estilos da Página de Contato --- */
+.contact-container { 
+    text-align: center; 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+.btn-whatsapp { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px; 
+    background: #25D366; 
+    color: white; 
+    padding: 16px 32px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 1.1rem;
+    transition: 0.3s; 
+    margin-top: 20px;
+}
+
+.btn-whatsapp:hover { 
+    background: #128C7E; 
+    transform: translateY(-2px); 
+}
+
