@@ -1,70 +1,294 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início | Gabriel Carvalho</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Arquivo JS Externo -->
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Augusto - Especialista TI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
-<nav>
-    <h2>Gabriel Carvalho</h2>
-    <div class="nav-controls">
-        <ul id="nav-links">
-            <li><a href="index.html" class="ativo">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo notranslate">
+      <a href="#home">Gabriel<span>.ti</span></a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#projetos" class="nav-link">Cases</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button id="theme-toggle" aria-label="Alternar Tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Home / Hero Section com Typewriter -->
+  <section id="home" class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Gabriel Augusto</h1>
+      <h2>
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </h2>
+      <p>Garantindo a estabilidade tecnológica de empresas através de manutenção de excelência, cabeamento estruturado e criação de automações inteligentes.</p>
+      <div class="hero-btns">
+        <a href="#servicos" class="btn btn-primary">Meus Serviços</a>
+        <a href="#contato" class="btn btn-secondary">Fale Comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas / KPI -->
+  <section class="kpi-section">
+    <div class="container kpi-container" data-aos="zoom-in">
+      <div class="kpi-card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h3><span class="counter" data-target="100">0</span>%</h3>
+        <p>Foco em Resolução</p>
+      </div>
+      <div class="kpi-card">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3><span class="counter" data-target="15">0</span>+</h3>
+        <p>Projetos de Redes</p>
+      </div>
+      <div class="kpi-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h3><span class="counter" data-target="4">0</span></h3>
+        <p>Certificações</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: Meus Serviços Corporativos -->
+  <section id="servicos" class="servicos">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Serviços Especializados</h2>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <i class="fa-solid fa-server"></i>
+          <h3>Consultoria em Infraestrutura</h3>
+          <p>Planejamento e execução de redes locais, cabeamento estruturado e organização de racks para máxima estabilidade.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Suporte Técnico Avançado</h3>
+          <p>Manutenção preventiva e corretiva de hardwares empresariais e hospitalares, focando em zero tempo de inatividade.</p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-robot"></i>
+          <h3>Automação de Processos</h3>
+          <p>Criação de scripts em Python e Integrações via Excel para substituir tarefas manuais e acelerar a produtividade da sua equipe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos / Estudos de Caso -->
+  <section id="projetos" class="projetos">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Estudos de Caso</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-img"><i class="fa-solid fa-server"></i></div>
+          <div class="project-info">
+            <h3>Infraestrutura Empresarial</h3>
+            <p>Reestruturação completa de rede para garantir estabilidade.</p>
+            <button class="btn-open-modal" data-modal="modal-infra">Ler o Case Completo</button>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img"><i class="fa-solid fa-laptop-medical"></i></div>
+          <div class="project-info">
+            <h3>Suporte Hospitalar</h3>
+            <p>Manutenção ágil em clínicas para fluxo ininterrupto.</p>
+            <button class="btn-open-modal" data-modal="modal-hospitalar">Ler o Case Completo</button>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img"><i class="fa-solid fa-file-excel"></i></div>
+          <div class="project-info">
+            <h3>Automação Financeira</h3>
+            <p>Sistema de controle inteligente com dashboards.</p>
+            <button class="btn-open-modal" data-modal="modal-2">Ler o Case Completo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modais estilo "Case Study" -->
+  <div id="modal-infra" class="modal">
+    <div class="modal-content case-study">
+      <span class="close-modal">&times;</span>
+      <h2>Case: Infraestrutura Empresarial</h2>
+      <div class="case-section">
+        <h4>O Desafio</h4>
+        <p>A empresa sofria com quedas constantes de conexão devido a um cabeamento desorganizado e equipamentos mal configurados.</p>
+      </div>
+      <div class="case-section">
+        <h4>A Solução</h4>
+        <p>Realizei o mapeamento da rede, refiz o cabeamento estruturado e organizei o rack de servidores, configurando novos switches de alta performance.</p>
+      </div>
+      <div class="case-section result">
+        <h4>O Resultado</h4>
+        <p><i class="fa-solid fa-check-circle"></i> Zero quedas de rede nos últimos 6 meses e velocidade de tráfego interno 40% maior.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-hospitalar" class="modal">
+    <div class="modal-content case-study">
+      <span class="close-modal">&times;</span>
+      <h2>Case: Manutenção em Clínicas</h2>
+      <div class="case-section">
+        <h4>O Desafio</h4>
+        <p>Clínicas com máquinas lentas que atrasavam o atendimento a pacientes e geravam filas na recepção.</p>
+      </div>
+      <div class="case-section">
+        <h4>A Solução</h4>
+        <p>Implementação de rotina de manutenção preventiva, upgrade para SSDs nas máquinas principais e limpeza de malwares nos sistemas médicos.</p>
+      </div>
+      <div class="case-section result">
+        <h4>O Resultado</h4>
+        <p><i class="fa-solid fa-check-circle"></i> Tempo de inicialização de sistemas reduzido em 70%, agilizando o fluxo de triagem de pacientes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal">
+    <div class="modal-content case-study">
+      <span class="close-modal">&times;</span>
+      <h2>Case: Automação Financeira Excel</h2>
+      <div class="case-section">
+        <h4>O Desafio</h4>
+        <p>O cliente gastava mais de 10 horas semanais digitando e categorizando gastos manualmente em planilhas simples.</p>
+      </div>
+      <div class="case-section">
+        <h4>A Solução</h4>
+        <p>Desenvolvimento de uma planilha inteligente com macros e integrações automáticas que categoriza despesas com base no nome do estabelecimento.</p>
+      </div>
+      <div class="case-section result">
+        <h4>O Resultado</h4>
+        <p><i class="fa-solid fa-check-circle"></i> Tempo de gestão reduzido para 30 minutos semanais, com visibilidade de métricas (KPIs) em tempo real.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção: Blog / Artigos -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Base de Conhecimento</h2>
+      <div class="blog-grid">
+        <article class="blog-card" data-aos="fade-up">
+          <div class="blog-content">
+            <span class="blog-date">Outubro 2026</span>
+            <h3>Por que organizar o cabeamento do seu escritório salva dinheiro?</h3>
+            <p>Cabos desorganizados não são apenas feios; eles causam superaquecimento, perda de pacotes e lentidão na sua operação...</p>
+            <a href="artigo-cabeamento.html" class="read-more">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-content">
+            <span class="blog-date">Setembro 2026</span>
+            <h3>Automatizando planilhas: Quando migrar do Excel para o Python?</h3>
+            <p>Descubra o momento exato em que a sua planilha começa a travar a sua empresa e como uma automação simples resolve o problema...</p>
+            <a href="artigo-excel-python.html" class="read-more">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: FAQ (Perguntas Frequentes) -->
+  <section id="faq" class="faq-section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>Você atende empresas remotamente ou apenas presencial?</summary>
+          <div class="faq-answer">Para demandas de infraestrutura e cabeamento, o atendimento é exclusivamente presencial (região local). Já os serviços de Automação, Python e Desenvolvimento Web são feitos 100% remotamente para todo o mundo.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Como funciona a contratação de uma automação?</summary>
+          <div class="faq-answer">Fazemos uma reunião de alinhamento gratuita via WhatsApp/Meet para entender sua tarefa manual. Em seguida, entrego um escopo e prazo, desenvolvo a solução (Python ou Excel) e realizo o treinamento com a sua equipe.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Você fornece nota fiscal para empresas?</summary>
+          <div class="faq-answer">Sim, atuo como profissional formalizado (CNPJ) e emito nota fiscal para todos os serviços de suporte, infraestrutura e desenvolvimento.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section id="contato" class="contato">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Vamos Conversar?</h2>
+      <p class="contato-subtitle">Pronto para melhorar a infraestrutura ou automatizar processos da sua empresa? Fale diretamente comigo.</p>
+      <div class="whatsapp-wrapper">
+        <a href="https://wa.me/5521999999999?text=Ol%C3%A1%20Gabriel!%20Vim%20pelo%20seu%20site." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> <span>Iniciar Conversa no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé Expandido Profissional -->
+  <footer class="footer-expanded">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h3 class="notranslate">Gabriel<span>.ti</span></h3>
+        <p>Profissional especializado em Suporte de TI, Infraestrutura de Redes e Desenvolvimento de Automações para ambientes corporativos.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação Rápida</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Estudos de Caso</a></li>
+          <li><a href="#blog">Artigos TI</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar Tema">
-            <i class="fas fa-moon" id="theme-icon"></i>
-        </button>
-        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">
-            <i class="fas fa-bars"></i>
-        </button>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato & Horários</h4>
+        <p><i class="fa-solid fa-envelope"></i> gabrieltrab911@gmail.com</p>
+        <p><i class="fa-solid fa-clock"></i> Seg a Sex: 09h às 18h</p>
+        <div class="social-icons">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
     </div>
-</nav>
-
-<header>
-    <div style="max-width: 900px; margin: 0 auto;">
-        <h1 style="font-size: 3.2rem; margin-bottom: 20px;">Transformando Infraestrutura e Código em Soluções</h1>
-        <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 40px; color: #cbd5e1; font-weight: 300;">
-            Especialista em Redes, CFTV e Automação de Sistemas. Ajudo clínicas, hospitais e empresas a operarem com máxima eficiência tecnológica, enquanto desenvolvo ferramentas inteligentes e interfaces modernas utilizando Python, HTML, CSS e JavaScript.
-        </p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="projetos.html" class="btn-primary btn-solid"><i class="fas fa-folder-open"></i> Ver Meus Projetos</a>
-            <a href="contato.html" class="btn-primary btn-outline"><i class="fas fa-envelope"></i> Entrar em Contato</a>
-        </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Gabriel Augusto. Todos os direitos reservados.</p>
     </div>
-</header>
+  </footer>
 
-<section>
-    <div class="grid">
-        <div class="card" style="text-align: center;">
-            <i class="fas fa-server"></i>
-            <h3>Infraestrutura Sólida</h3>
-            <p>Implementação de cabeamento estruturado, montagem de racks e manutenção de hardware focado em alta disponibilidade.</p>
-        </div>
-        <div class="card" style="text-align: center;">
-            <i class="fas fa-code"></i>
-            <h3>Desenvolvimento Ágil</h3>
-            <p>Criação de scripts de automação, web scraping para extração de dados e front-end dinâmico para plataformas web.</p>
-        </div>
-        <div class="card" style="text-align: center;">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Segurança Eletrônica</h3>
-            <p>Instalação e configuração completa de sistemas de CFTV, DVR/NVR integrados diretamente a redes locais.</p>
-        </div>
-    </div>
-</section>
+  <button id="back-to-top" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
 
-<footer>
-    <p>© 2026 Gabriel Augusto</p>
-</footer>
+  <!-- Script do Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'en,es,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
